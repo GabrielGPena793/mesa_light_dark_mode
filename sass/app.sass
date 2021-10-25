@@ -1,3 +1,8 @@
+@mixin pc ($medida)
+    @media (min-width: $medida)
+        @content
+    
+
 body
     background: black
     color: #ccc
@@ -9,21 +14,61 @@ body
     text-align: center
     transition: 0.8s
 
-    button
-        width: 20%
-        padding: 10px
-        box-shadow: 0 0 5px white
-        border: 3px solid lightgreen
-        background: purple
-        color: white
-        border-radius: 10px
-        cursor: pointer
+    .change
+        background: white
+        width: 10%
+        padding: 2px
+        margin: auto
+        border-radius: 20px
+        position: relative
+        border: 2px solid red
+        box-shadow: 0 0 5px yellow
 
-        &:hover
-            opacity: 0.8
+        @include pc(714px)
+            width: 14%
+        
 
+        @include pc(1066px)
+            width: 8%
+        
+
+        @include pc(1406px)
+            width: 7%
+        
+        @include pc(1654px)
+            width: 5%
+
+
+        button
+            width: 50%
+            height: 100%
+            padding: 10px
+            background: purple
+            color: white
+            border-radius: 50%
+            cursor: pointer
+            position: relative
+            left: -22px
+            transition: 0.8s
+            border: none
+        
+            &:hover
+                opacity: 0.8
+
+        .active-move
+            left: 22px
+            background: orange
+            color: black
+
+    .active-bg
+        background: black
+        box-shadow: 0 0 10px black
+
+      
 .light
     background: white
     color: black
-    
+
+.bi-brightness-high-fill
+    font-size: 15px
 

@@ -9,23 +9,69 @@ body {
   text-align: center;
   transition: 0.8s;
 }
-body button {
-  width: 20%;
+body .change {
+  background: white;
+  width: 10%;
+  padding: 2px;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  border: 2px solid red;
+  box-shadow: 0 0 5px yellow;
+}
+@media (min-width: 714px) {
+  body .change {
+    width: 14%;
+  }
+}
+@media (min-width: 1066px) {
+  body .change {
+    width: 8%;
+  }
+}
+@media (min-width: 1406px) {
+  body .change {
+    width: 7%;
+  }
+}
+@media (min-width: 1654px) {
+  body .change {
+    width: 5%;
+  }
+}
+body .change button {
+  width: 50%;
+  height: 100%;
   padding: 10px;
-  box-shadow: 0 0 5px white;
-  border: 3px solid lightgreen;
   background: purple;
   color: white;
-  border-radius: 10px;
+  border-radius: 50%;
   cursor: pointer;
+  position: relative;
+  left: -22px;
+  transition: 0.8s;
+  border: none;
 }
-body button:hover {
+body .change button:hover {
   opacity: 0.8;
+}
+body .change .active-move {
+  left: 22px;
+  background: orange;
+  color: black;
+}
+body .active-bg {
+  background: black;
+  box-shadow: 0 0 10px black;
 }
 
 .light {
   background: white;
   color: black;
+}
+
+.bi-brightness-high-fill {
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
